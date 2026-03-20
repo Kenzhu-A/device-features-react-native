@@ -3,10 +3,11 @@ import { View, Text, FlatList, StyleSheet, TouchableOpacity, ActivityIndicator, 
 import { useFocusEffect } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { Feather } from '@expo/vector-icons';
-import { RootStackParamList } from '../types/types';
-import { useTravel } from '../context/TravelContext';
-import { useTheme } from '../context/ThemeContext';
-import { EntryItem } from '../components/EntryItem';
+import { RootStackParamList } from '../../types/types';
+import { useTravel } from '../../context/TravelContext';
+import { useTheme } from '../../context/ThemeContext';
+import { EntryItem } from '../../components/EntryItem/EntryItem';
+import { styles } from './HomeScreen.styles';
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList, 'Home'>;
 
@@ -66,24 +67,3 @@ export const HomeScreen = ({ navigation }: { navigation: NavigationProp }) => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: { flex: 1 },
-  center: { flex: 1, justifyContent: 'center', alignItems: 'center', padding: 20 },
-  emptyIcon: { marginBottom: 16, opacity: 0.5 },
-  list: { padding: 16, paddingBottom: 100 },
-  fab: {
-    position: 'absolute', 
-    bottom: 30, 
-    right: 24,
-    width: 60,
-    height: 60,
-    borderRadius: 30,
-    justifyContent: 'center',
-    alignItems: 'center',
-    elevation: 5, 
-    shadowColor: '#000', 
-    shadowOpacity: 0.3, 
-    shadowRadius: 5,
-    shadowOffset: { width: 0, height: 3 }
-  },
-});

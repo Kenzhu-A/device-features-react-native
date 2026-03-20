@@ -4,8 +4,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Feather } from '@expo/vector-icons';
 import { RootStackParamList } from '../types/types';
-import { HomeScreen } from '../screens/HomeScreen';
-import { AddTravelEntryScreen } from '../screens/AddTravelEntryScreen';
+import { HomeScreen } from '../screens/Home/HomeScreen';
+import { AddTravelEntryScreen } from '../screens/AddTravelEntry/AddTravelEntryScreen';
 import { useTheme } from '../context/ThemeContext';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
